@@ -53,17 +53,33 @@ body {
     position: fixed;
     top: calc(50% - 25px);
     left: calc(50% - 25px);
-    transform: translate(-50%, -50%);
-    animation: anim_1 1s infinite linear;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-animation: anim_1 1s infinite linear;
+            animation: anim_1 1s infinite linear;
     z-index: 110;
+}
+
+@-webkit-keyframes anim_1{
+	0%{
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
 }
 
 @keyframes anim_1{
 	0%{
-		transform: rotate(0);
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
 	}
 	100%{
-		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
 	}
 }
 
@@ -77,17 +93,33 @@ body {
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
-    transform: translate(-50%, -50%);
-    animation: anim_2 1.2s infinite linear;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-animation: anim_2 1.2s infinite linear;
+            animation: anim_2 1.2s infinite linear;
     z-index: 110;
+}
+
+@-webkit-keyframes anim_2{
+	0%{
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+	}
 }
 
 @keyframes anim_2{
 	0%{
-		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
 	}
 	100%{
-		transform: rotate(0);
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
 	}
 }
 
@@ -122,19 +154,27 @@ nav {
     font-size: 13px;
     text-transform: uppercase;
     position: fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(250,250,250,1)),to(rgba(200,200,200,0.7)));
+    background: -o-linear-gradient(top, rgba(250,250,250,1),rgba(200,200,200,0.7));
     background: linear-gradient(180deg, rgba(250,250,250,1),rgba(200,200,200,0.7));
     z-index: 100;
     text-align: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 #top_nav {
     display: inline-block;
     position: relative;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 .nav_scroll {
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
@@ -142,6 +182,8 @@ nav {
     display: block;
     margin: 0;
     list-style: none;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     padding-bottom: 10px;
 }
@@ -163,7 +205,9 @@ li:hover {
 .arrow {
     position: relative;
     display: none;
-    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     font-size: 24px;
     color: black;
 }
@@ -178,6 +222,8 @@ li:hover {
 
 .logo_small {
     height: 0px;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
@@ -968,7 +1014,8 @@ footer {
     header, main, footer {display: none}
     .small_resolution_alarm {
         display:block;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         width: 100%;
         height: 100%;
         position: relative;
