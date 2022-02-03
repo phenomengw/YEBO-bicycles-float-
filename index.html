@@ -5,48 +5,57 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
         <title>YEBO Bicycle (float)</title>
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="img/favicon.png" type=”image/x-icon”>
     </head>
     <body>
+        <div class="preloader_bg"></div>
+        <div class="preloader_anim_1"></div>
+        <div class="preloader_anim_2"></div>
+        <div class="small_resolution_alarm">
+            <p id="sorry">Sorry</p>
+            <p id="sorry_text">
+                This cite is not for devices with widescreen resolution less than 300px. Please rotate your device to the landscape orientation, or change your device to a newer one ;)
+            </p>
+        </div>
+        <div class="subscribe">
+            <div class="subscribe_bg"></div>
+            <div class="subscribe_content">
+                <div class="subscribe_header">
+                    <button class="subscribe_close">&#10006;</button>
+                </div>
+                <div class="subscribe_main">
+                    <div class="subscribe_text">
+                        <p>Subscribe to us to be the first to know about our new products</p>
+                    </div>
+                    <input class="subscribe_input" type="email" name="email" placeholder="enter your email..." required>
+                    <input class="subscribe_button" type="submit" name="email" value="SEND">
+                </div>
+            </div>
+        </div>
+        <div class="you_are_subscribe">
+            <p>Thanks!</p>
+            <p>You are subscribe for us. We send news to a <br><span class="subscribe_mail"></span><br>about our new products.</p>
+        </div>
         <header>
             <a name="shop"></a>
             <nav>                
-                <div class="top_nav">
+                <div id="top_nav" class="nav_scroll">
                     <ul>                        
                         <li><a href="#about_us">about us</a></li>
                         <li id="point">.</li>
                         <li><a href="#work">work</a></li>
-                        <li id="logo"><img src="img/Logo_nav.png"></li>
+                        <li><img id="logo" src="img/Logo_nav.png"><a href="#shop"><p class="arrow">&laquo;</p></a></li>
                         <li><a href="#shop_now">shop</a></li>
                         <li id="point">.</li>
                         <li><a href="#contact">contact</a></li>
                     </ul>
                 </div>
             </nav>
-            <div id="small_resolution_alarm">
-                <p id="sorry">Sorry</p>
-                <p id="sorry_text">This cite is not for devices with widescreen resolution less than 300px. Please rotate your device to the landscape orientation, or change your device to a newer one ;)</p>
-            </div>
         </header>
         <main>
-            <div class="subscribe subscribe_container">
-                <div class="subscribe_content">
-                    <div class="subscribe_header">
-                        <button class="subscribe_close">X</button>
-                    </div>
-                    <div class="subscribe_main">
-                        <div class="subscribe_text">
-                            <p>Subscribe to us to be the first to know about our new products</p>
-                        </div>
-                        <input class="subscribe_input" type="email" name="email" placeholder="enter your email..." required>
-                        <input class="subscribe_button" type="submit" name="email" value="SEND">
-                    </div>
-                </div>
-            </div>
-            <div class="you_are_subscribe">
-                <p>You are subscribe for us. We send news to a <span class="subscribe_mail"></span> about our new products.</p>
-            </div>
             <section class="generation">
                 <a name="about_us"></a>
                 <img class="generation_image" src="img/Icon_generation.png">
@@ -128,25 +137,21 @@
                 <div class="retro_right"></div>
             </section>
             <section class="twit">
-                <img class="twit_image" src="img/Icon_twit.png">
-                <h2 class="twit_header">
-                    AOD New York  @aod / <span id="thin">35 min</span> 
-                </h2>
-                <p class="twit_text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
-                </p>
-                <div id="twittes">
-                    <div class="twittes">
-                        <input type="radio" id="twit_1" name="twit" value="twit_1" checked>
-                        <label for="twit_1"></label>
+                <img src="img/Icon_twit.png">
+                <div class="twit_container">
+                    <div class="owl-carousel owl-theme">
+                    <div>
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Lovin the love, thanks Skinman!… <a href="https://t.co/GeFaLYX8qt">https://t.co/GeFaLYX8qt</a></p>&mdash; Velo Bike Shop (@VeloBikeShop) <a href="https://twitter.com/VeloBikeShop/status/1005492798014058496?ref_src=twsrc%5Etfw">June 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                    <div class="twittes">
-                        <input type="radio" id="twit_2" name="twit" value="twit_2">
-                        <label for="twit_2"></label>
+                    <div>
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Have you ever dreamed about participating in the L’Erocia? Well nows your chance with this… <a href="https://t.co/nWtD56Y6xr">https://t.co/nWtD56Y6xr</a></p>&mdash; Velo Bike Shop (@VeloBikeShop) <a href="https://twitter.com/VeloBikeShop/status/975136002997215239?ref_src=twsrc%5Etfw">March 17, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                    <div class="twittes">
-                        <input type="radio" id="twit_3" name="twit" value="twit_3">
-                        <label for="twit_3"></label>
+                    <div>
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">You could win this custom <a href="https://twitter.com/Chrome_Ind?ref_src=twsrc%5Etfw">@Chrome_Ind</a> messenger bag at the Bike to Work Day After Party! <a href="http://t.co/vUGevXfd33">http://t.co/vUGevXfd33</a> <a href="http://t.co/8Ehauz1pK4">http://t.co/8Ehauz1pK4</a></p>&mdash; Velo Bike Shop (@VeloBikeShop) <a href="https://twitter.com/VeloBikeShop/status/598627664560283648?ref_src=twsrc%5Etfw">May 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div>
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our entire Chrome bag inventory is 25% OFF now through March! Stop by and check out of selection of backpacks and messenger bags.</p>&mdash; Velo Bike Shop (@VeloBikeShop) <a href="https://twitter.com/VeloBikeShop/status/572942030252339200?ref_src=twsrc%5Etfw">March 4, 2015</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                     </div>
                 </div>
             </section>
@@ -224,7 +229,8 @@
             </div>
         </footer>
     </body>
-        <script src="jquery.js"></script>
-        <script src="jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
         <script src="script.js"></script>
     </html>
