@@ -4,8 +4,9 @@ $(document).ready(function() {
     $('.preloader_anim_1, .preloader_anim_2, .preloader_bg').delay(2000).fadeOut();
     
     //Появление окна Subscribe//
-    $(".subscribe").delay(5000).show(0);
-    $('html, body').delay(5000).css('overflow-y', 'hidden');
+    $(".subscribe").delay(5000).show(function(){
+        $('html, body').css('overflow-y', 'hidden');  
+    });
     
     //Закрытие окна Subscribe//
     $(".subscribe_close, .subscribe_bg").click(function() {
@@ -15,6 +16,7 @@ $(document).ready(function() {
     
     //Появление окна при отправке формы//
     $(".subscribe_button, #submit").click(function() {
+        $('html, body').css('overflow-y', 'inherit');
         $(".you_are_subscribe").delay(1000).show(0).delay(5000).hide(0);
         $(".subscribe").hide(0)
     });
